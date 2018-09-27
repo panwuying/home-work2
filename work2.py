@@ -1,0 +1,11 @@
+import math
+x1,y1=eval(raw_input("enter point 1 (latitude and longitude)in degrees:>>"))
+x2,y2=eval(raw_input("enter point 2 (latitude and longitude)in degrees:>>"))
+x1=math.radians(x1)
+y1=math.radians(y1)
+x2=math.radians(x2)
+y2=math.radians(y2)
+e=math.sin(x1) *math.sin(x2)
+f=math.cos(x1)*math.cos(x2)*math.cos(y1-y2)
+g=6371.01*(math.acos(e+f))
+print(g)
